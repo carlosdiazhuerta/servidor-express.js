@@ -1,5 +1,6 @@
 const express = require('express');
-const routerApi = require('./routers/index');
+const routerApi = require('../api/routers/index');
+const cors = require('cors');
 const {
   logErrors,
   logHandler,
@@ -8,7 +9,12 @@ const {
 
 const app = express();
 app.use(express.json());
-const port = 3000;
+app.use(cors());
+const port = process.env.PORT || 3000;
+
+app.get('/api', (req, res) => {
+  res.send('holaa soy una ruta, esta solo es una practica con express');
+});
 
 routerApi(app);
 app.listen(port, () => {
