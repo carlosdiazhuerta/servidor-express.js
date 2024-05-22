@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "lint": "eslint"
   },
   "keywords": [],
@@ -20,6 +20,9 @@
     "prettier": "^3.2.5"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "@faker-js/faker": "^8.4.1",
+    "@hapi/boom": "^9.1.4",
+    "express": "^4.19.2",
+    "joi": "^17.13.1"
   }
 }
